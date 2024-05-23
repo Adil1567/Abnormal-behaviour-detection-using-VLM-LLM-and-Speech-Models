@@ -1,0 +1,2 @@
+# Abnormal-behaviour-detection-using-VLM-LLM-and-Speech-Models
+This project is aimed at detecting the abnormal behaviour or emergency cases using vision-language model (VLM), large language model (LLM), human detection model, text-to-speech (TTS) and speech-to-text models (STT).  The  framework can detect the subtle sings of emergency and actively interact with the user to make an accurate decision.
