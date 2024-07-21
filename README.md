@@ -1,12 +1,6 @@
 # Abnormal-behaviour-detection-using-VLM-LLM-and-Speech-Models
 This project is aimed at detecting the abnormal behaviour or emergency cases using vision-language model (VLM), large language model (LLM), human detection model, text-to-speech (TTS) and speech-to-text models (STT).  The  framework can detect the subtle sings of emergency and actively interact with the user to make an accurate decision.
-![High-level diagram of our emergency detection system: The camera detects
-a person in an emergency, capturing an image, which is preprocessed for analysis.
-The LLaVA model evaluates the image through a VQA session, answering predefined
-questions based on visual cues, generating an anomaly score. If the score surpasses
-a threshold, the model engages in user-model interaction mode, gathering detailed
-responses. Ultimately, based on contextual information, the LLaVA model decides
-whether to call an ambulance.](images/Initial Emergency Detection using Visual Question Answering (VQA) (4) (2).png)
+![](images/Emergency_Detection.png)
 
 # Multi-Modal System for Real-Time Emergency Response
 
