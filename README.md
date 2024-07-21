@@ -66,8 +66,9 @@ The system integrates various technologies, including Vision-Language Models (VL
 
 1. **Clone the LLaVA Repository**
 2. **Follow the Instructions to Load LLaVA 1.5 13B**:
+   
       -**Refer to the LLaVA repository documentation for detailed steps to load LLaVA 1.5 13B and all its checkpoints: https://github.com/haotian-liu/LLaVA/blob/main/README.md**
-3. **Update the server.py Code**:
+4. **Update the server.py Code**:
       - **Change the server.py code to update the path of your LLaVA 1.5 checkpoints and image folder**
 ### Local Setup
 
@@ -77,7 +78,7 @@ The system integrates various technologies, including Vision-Language Models (VL
 3. **Install Piper TTS**:
       -**Follow the instructions from the Piper TTS repository to install and set up the model: https://github.com/rhasspy/piper**
 4.**Install Whisper STT**:
-      -**Follow the instructions from the Whisper (small version) repository to install and set up the model: https://github.com/mallorbc/whisper_mic
+      -**Follow the instructions from the Whisper (small version) repository to install and set up the model: https://github.com/mallorbc/whisper_mic**
 ### Running the System
 - **Run local_file_setup.py**:
       -**Ensure that the Intel RealSense d455 camera and Rode Wireless GO microphones are properly set up and connected.**
