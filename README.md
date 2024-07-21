@@ -30,15 +30,33 @@ The system integrates various technologies, including Vision-Language Models (VL
 ### Continuous Monitoring
 
 1. **Human Detection**: YOLOv8 continuously monitors the camera footage.
-2. **Image Capturing**: When a person is detected, the camera captures frames at set intervals.
-3. **Preprocessing**: The captured frame undergoes preprocessing to isolate the individual and their immediate surroundings.
-4. **File Transfer**: Preprocessed images and a "mode.txt" file are sent to the server.
+2. **Image Capturing**: When a person is detected, the camera captures frames and the goes to the preporocessing, file transfer and LLaVA model initialization.
+3. **Preprocessing**: *Preprocessing**: The captured frame undergoes preprocessing, which includes:
+   - Calculating the bounding boxes around the detected person.
+   - Expanding the bounding boxes to capture nearby objects.
+   - Cropping the image to focus on the person and the surrounding objects for zooming and better model comprehension.
+4. **File Transfer**: Preprocessed images and a "mode.txt" (for initialization) file are sent to the server.
 
-### Abnormality Detection
+### Abnormality Detection and Thresholding
 
 1. **VQA Session**: The system utilizes a set of predefined questions to identify early signs of abnormalities.
-2. **User-Model Interaction**: If abnormalities are detected, the system engages in real-time interactions to gather detailed responses.
-3. **Decision Making**: Based on the contextual information, the system decides on actions such as calling an ambulance.
+2. **Thresholding**: Collected user responses are tallied to generate an abnormality score, representing the count of "Yes" answers. If this score surpasses a predetermined threshold (the non-anomalous action threshold), the system initiates real-time dialogue with the user.
+3. **User Confirmation**: Before activating the user-model interaction block, the system requests the user to confirm the need for further interaction. If the user affirms assistance is required ("Yes" response), the system updates the "mode.txt" file to 1, signaling the activation of the interaction block. If the user remains unresponsive, the system automatically triggers the interaction block.
+
+### User-Model Interaction Block
+
+1. **Engagement**: The system engages directly with the individual, posing questions tailored to the visual context and preserving the interaction history.
+2. **Question Generation**: LLaVA dynamically generates a set of questions tailored to the user's visual context and prior responses. These questions are stored in a "question.txt" file and sent to the local part for processing by speech models.
+3. **Activation of TTS and STT**: 
+   - **TTS**: Piper TTS audibly presents the questions to the user.
+   - **STT**: Whisper STT captures and transcribes the user's responses into the "answers.txt" file on the local side. Whisper STT halts recording after three seconds of silence, which is customizable to manage conversational pauses.
+4. **Interaction Analysis**: The "answers.txt" file is transmitted back to the server for analysis by the LLaVA model. Based on the user's responses and previous image embeddings, the system gauges the severity of the situation.
+
+### Decision-Making Process
+
+1. **Emergency Determination**: If the "answers.txt" file is empty, indicating no response from the individual, the system interprets it as unresponsiveness and triggers an immediate ambulance call. If responses are present, LLaVA scrutinizes them alongside historical data and image analysis to ascertain the necessity for emergency services.
+2. **Iterative Process**: The iterative process of generating questions and analyzing user responses continues until the LLaVA model determines whether to call an ambulance.
+3. **Final Decision**: Upon detecting an emergency, the model summarizes the situation, provides recommendations for the user, and forwards relevant information to medical professionals or caregivers for further assistance.
 
 ## Installation and Setup
 
