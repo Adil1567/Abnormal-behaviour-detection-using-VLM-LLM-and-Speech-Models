@@ -31,7 +31,7 @@ The system integrates various technologies, including Vision-Language Models (VL
 
 1. **Human Detection**: YOLOv8 continuously monitors the camera footage.
 2. **Image Capturing**: When a person is detected, the camera captures frames and the goes to the preporocessing, file transfer and LLaVA model initialization.
-3. **Preprocessing**: *Preprocessing**: The captured frame undergoes preprocessing, which includes:
+3. **Preprocessing**: The captured frame undergoes preprocessing, which includes:
    - Calculating the bounding boxes around the detected person.
    - Expanding the bounding boxes to capture nearby objects.
    - Cropping the image to focus on the person and the surrounding objects for zooming and better model comprehension.
@@ -76,7 +76,7 @@ The system integrates various technologies, including Vision-Language Models (VL
       - **Follow the instructions from the YOLOv8 repository to install and set up the model (yolo8n.pt): https://github.com/ultralytics/ultralytics**
 3. **Install Piper TTS**:
       - **Follow the instructions from the Piper TTS repository to install and set up the model: https://github.com/rhasspy/piper**
-4.**Install Whisper STT**:
+4. **Install Whisper STT**:
       - **Follow the instructions from the Whisper (small version) repository to install and set up the model: https://github.com/mallorbc/whisper_mic**
 ### Running the System
 - **Run local_file_setup.py**:
