@@ -13,7 +13,7 @@ The system integrates various technologies, including Vision-Language Models (VL
 
 ### Hardware
 
-- **NVIDIA DGX V100 Server**: Used for running the LLaVA model and data storage.
+- **NVIDIA DGX V100 Server**: Used for running the LLaVA model and data storage (can be run on one NVIDIA V100 GPU).
 - **Intel RealSense d455 Camera**: Positioned strategically for extensive coverage of the living space, connected to a laptop.
 - **Rode Wireless GO Microphones**: Worn by participants for precise audio capture during interactions.
 - **Local Laptop**: Equipped with an audio speaker, this laptop facilitates remote server access, handles image and text file transfers, and runs Piper TTS, human detection model, and Whisper STT models.
