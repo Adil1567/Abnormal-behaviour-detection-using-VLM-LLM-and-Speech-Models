@@ -2,4 +2,4 @@ This file contains all the models that work on the local part.
 To download the YOLOv8, you need to load the weights of the YOLO model: https://github.com/ultralytics/ultralytics
 To download and set the Piper: https://github.com/rhasspy/piper
 To download and set Whipser: https://github.com/mallorbc/whisper_mic
-As you load all the necessary weights of the models, you can rub the local.py
+As you load all the necessary weights of the models, you can run the local.py
