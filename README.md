@@ -83,7 +83,7 @@ The system integrates various technologies, including Vision-Language Models (VL
       - **Ensure that the Intel RealSense d455 camera and Rode Wireless GO microphones are properly set up and connected.**
       - **The model will be taking the frames until it detects the person**
       - **After detecting the person, the server.py file must be run on the server part**
-2. **Run seerver.py**:
+2. **Run llava_server_py.py**:
       - **The LLava model will conduct VQA on the predefined set of questions in the code**
       - **The LLaVA model will conduct VQA on the predefined set of questions in the code**
       - **The model will analyze responses and generate an abnormality score**
