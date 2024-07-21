@@ -79,11 +79,11 @@ The system integrates various technologies, including Vision-Language Models (VL
 4. **Install Whisper STT**:
       - **Follow the instructions from the Whisper (small version) repository to install and set up the model: https://github.com/mallorbc/whisper_mic**
 ### Running the System
-- **Run local_file_setup.py**:
+1. **Run local_file_setup.py**:
       - **Ensure that the Intel RealSense d455 camera and Rode Wireless GO microphones are properly set up and connected.**
       - **The model will be taking the frames until it detects the person**
       - **After detecting the person, the server.py file must be run on the server part**
-- **Run seerver.py**:
+2. **Run seerver.py**:
       - **The LLava model will conduct VQA on the predefined set of questions in the code**
       - **The LLaVA model will conduct VQA on the predefined set of questions in the code**
       - **The model will analyze responses and generate an abnormality score**
