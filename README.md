@@ -66,29 +66,28 @@ The system integrates various technologies, including Vision-Language Models (VL
 
 1. **Clone the LLaVA Repository**
 2. **Follow the Instructions to Load LLaVA 1.5 13B**:
-   
-      -**Refer to the LLaVA repository documentation for detailed steps to load LLaVA 1.5 13B and all its checkpoints: https://github.com/haotian-liu/LLaVA/blob/main/README.md**
+      - **Refer to the LLaVA repository documentation for detailed steps to load LLaVA 1.5 13B and all its checkpoints: https://github.com/haotian-liu/LLaVA/blob/main/README.md**
 4. **Update the server.py Code**:
       - **Change the server.py code to update the path of your LLaVA 1.5 checkpoints and image folder**
 ### Local Setup
 
 1. **Create a Virtual Environment**
 2. **Install YOLOv8**:
-      -**Follow the instructions from the YOLOv8 repository to install and set up the model (yolo8n.pt): https://github.com/ultralytics/ultralytics**
+      - **Follow the instructions from the YOLOv8 repository to install and set up the model (yolo8n.pt): https://github.com/ultralytics/ultralytics**
 3. **Install Piper TTS**:
-      -**Follow the instructions from the Piper TTS repository to install and set up the model: https://github.com/rhasspy/piper**
+      - **Follow the instructions from the Piper TTS repository to install and set up the model: https://github.com/rhasspy/piper**
 4.**Install Whisper STT**:
-      -**Follow the instructions from the Whisper (small version) repository to install and set up the model: https://github.com/mallorbc/whisper_mic**
+      - **Follow the instructions from the Whisper (small version) repository to install and set up the model: https://github.com/mallorbc/whisper_mic**
 ### Running the System
 - **Run local_file_setup.py**:
-      -**Ensure that the Intel RealSense d455 camera and Rode Wireless GO microphones are properly set up and connected.**
-      -**The model will be taking the frames until it detects the person**
-      -**After detecting the person, the server.py file must be run on the server part**
+      - **Ensure that the Intel RealSense d455 camera and Rode Wireless GO microphones are properly set up and connected.**
+      - **The model will be taking the frames until it detects the person**
+      - **After detecting the person, the server.py file must be run on the server part**
 - **Run seerver.py**:
-      -**The LLava model will conduct VQA on the predefined set of questions in the code**
-      -**The LLaVA model will conduct VQA on the predefined set of questions in the code**
-      -**The model will analyze responses and generate an abnormality score**
-      -**If the abnormality score surpasses the threshold, the system will initiate real-time dialogue with the user**
-      -**The user will be prompted to confirm the need for further interaction. If the user confirms ("Yes" response), the system updates the `mode.txt` file to 1, signaling the activation of the interaction block. If the user remains unresponsive, the system automatically triggers the interaction block**
-      -**Ensure that the microphone is working to interact with the system and answer the questions**
-      -**Finally, the system should give the decision on whether to call the ambulance and voice the suggestions (this suggestion can be sent to the email of the doctor)** 
+      - **The LLava model will conduct VQA on the predefined set of questions in the code**
+      - **The LLaVA model will conduct VQA on the predefined set of questions in the code**
+      - **The model will analyze responses and generate an abnormality score**
+      - **If the abnormality score surpasses the threshold, the system will initiate real-time dialogue with the user**
+      - **The user will be prompted to confirm the need for further interaction. If the user confirms ("Yes" response), the system updates the `mode.txt` file to 1, signaling the activation of the interaction block. If the user remains unresponsive, the system automatically triggers the interaction block**
+      - **Ensure that the microphone is working to interact with the system and answer the questions**
+      - **Finally, the system should give the decision on whether to call the ambulance and voice the suggestions (this suggestion can be sent to the email of the doctor)** 
